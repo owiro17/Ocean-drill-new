@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  Our Work 
+{% endblock title %}
+
+{% block content %}
+<div class="our-work-title">
+  <h1 data-aos="fade">A Glimpse Of What We've Done</h1>
+  <p data-aos="fade-up" data-aos-delay="500" >We bring a personal and effective approach to every project we work on.</p>
+</div>
+<div class="work-navbar">
+  <ul>
+    <li data-aos="fade"><a href="#drilling">Drilling</a> </li>
+    <li data-aos="fade" data-aos-delay="500"><a href="#machinery">Machinery</a> </li>
+    <li data-aos="fade" data-aos-delay="600"><a href="#pump-fitting">Pump Fitting</a> </li>
+    <li data-aos="fade" data-aos-delay="700"><a href="#water-finding">Water Finding</a> </li>
+  </ul>
+</div>
+<section class="our-work-content">
+  <section class="work" >
+    <h1 id="drilling" data-aos="fade-up">Drilling</h1>
+    <div class="img-wrapper" data-aos="fade">
+      <div class="img-description">
+        <img src="/oceandrill/static/img/work 4.jpeg" alt="Drilling" data-aos="fade-up" data-aos-delay="500" />
+      </div>
+      <div class="img-description">
+        <img src="/oceandrill/static/img/work 6.jpeg" alt="Drilling" data-aos="fade-up" data-aos-delay="600"/>
+      </div>
+      <div class="img-description">
+        <img src="/oceandrill/static/img/work 7.jpeg" alt="Drilling" data-aos="fade-up" data-aos-delay="600"/>
+      </div>
+
+
+    </div>
+  </section>
+  
+  <section class="work" id="machinery">
+    <h1>Machinery</h1>
+    <div class="img-wrapper" data-aos="fade">
+      <div class="img-description">
+        <img src="/oceandrill/static/img/work 8.jpeg" alt="Drilling" data-aos="fade-up" />
+      </div>
+      <div class="img-description">
+        <img src="/oceandrill/static/img/work 11.jpeg" alt="Drilling" data-aos="fade-up" data-aos-delay="500"/>
+      </div>
+      <div class="img-description">
+        <img src="/oceandrill/static/img/work 12.jpeg" alt="Drilling" data-aos="fade-up" data-aos-delay="600">
+      </div>
+    </div>
+  </section >
+  
+  <section class="work" id="pump-fitting">
+    <h1>Pump Fitting</h1>
+    <div class="img-wrapper" data-aos="fade">
+      <div class="img-description">
+        <img src="/oceandrill/static/img/imgholder.svg" alt="Drilling" data-aos="fade-up" />
+      </div>
+      <div class="img-description">
+        <img src="/oceandrill/static/img/imgholder.svg" alt="Drilling" data-aos="fade-up" />
+      </div>
+      <div class="img-description">
+        <img src="/oceandrill/static/img/imgholder.svg" alt="Drilling" data-aos="fade-up" />
+      </div>
+  </section>
+  
+  <section class="work" id="water-finding">
+    <h1>Water Finding</h1>
+    <div class="img-wrapper" data-aos="fade" >
+      <div class="img-description">
+        <img src="/oceandrill/static/img/waterfinding.jpg" alt="Drilling" data-aos="fade-up" />
+      </div>
+      <div class="img-description">
+        <img src="/oceandrill/static/img/imgholder.svg" alt="Drilling" data-aos="fade-up" />
+      </div>
+      <div class="img-description">
+        <img src="/oceandrill/static/img/imgholder.svg" alt="Drilling" data-aos="fade-up" />
+      </div>
+  </section>
+</section>
+
+<div class="contact-us-wrapper" data-aos="fade-up">
+  <h1 data-aos="fade" data-aos-delay="500">We are interested in hearing from you. <br> Write about your primary interest right now!</h1>
+  <a href="/contact-us/" id="contact-us" data-aos="fade-up" data-aos-delay="600">Contact Us</a>
+</div>
+
+{% endblock content %}

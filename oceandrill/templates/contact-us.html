@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Contact Us
+{% endblock title %}
+
+{% block content %}
+  <div class="contact-header">
+    <h1 data-aos="fade">Get In Touch With Us</h1>
+    <p data-aos="fade-up" data-delay="500">We are a step away.Contact us!</p>
+  </div>
+
+  {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+        {{ message }}
+        {% endfor %}
+    </div>
+  {% endif %}
+
+    <div class="contact-container">
+      <img src="/oceandrill/static/img/contact-us-ill.svg" alt="" id="contact-ill" data-aos="fade">
+      <form action="#" method="POST">
+          {% csrf_token %}
+          <div class="input-container" data-aos="fade">
+              <div class="group" data-aos="fade" data-delay="500">
+                  {{form.first_name}}
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>First Name</label>
+              </div>
+              <div class="group" data-aos="fade" data-delay="600">
+                  {{form.second_name}}
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Second Name</label>
+              </div>
+              <div class="group" data-aos="fade" data-delay="5]700">
+                  {{form.email}}
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label>Email</label>
+              </div>
+              <div class="group" data-aos="fade" data-delay="800">
+                {{form.phone}}
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Phone number</label>
+            </div>
+              <div class="group" data-aos="fade" data-delay="900">
+                {{form.message}}
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Your message(Required)</label>
+            </div>
+            <input type="submit" id="submit">
+          </div>    
+          
+      </form>
+    </div>
+   
+    <div class="map" data-aos="fade">
+      <h1 id="map-title" data-aos="fade-up" data-delay="500">Where to find us</h1>
+      <iframe data-aos="fade" data-delay="600"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7352966080402!2d36.89405051374704!3d-1.3350264860553631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f127177460255%3A0x1ba0a29cedc2402d!2sDuldul%20Godown%2C%20Mombasa%20Road%2C%20Nairobi%20City!5e0!3m2!1sen!2ske!4v1680002076531!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+{% endblock content %}

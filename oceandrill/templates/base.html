@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/style.css'%}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/oceandrill/static/img/Ocean Drill.ico" type="image/png">
+    <title>{% block title %} {% endblock title %}</title>
+    {% block head %} {% endblock head %}
+  </head>
+  <body>
+    <div class="preloader" id="preloader">
+      <span class="loader"></span>
+    </div>
+
+      <nav>
+        <div id="navlinks">
+
+          <div class="nav-left" id="NavBar">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about-us/">About Us</a></li>
+              <li><a href="/what-we-do/">What We Do</a></li>
+            </ul>
+          </div>
+          <div class="logo-container">
+            <img src="/oceandrill/static/img/Ocean Drill.png" alt="logo" />
+          </div>
+          <div class="nav-right" id="NavBar">
+            <ul>
+              <li><a href="/our-work/">Our Work</a></li>
+              <li><a href="/faq/">FAQ</a></li>
+              <li><a href="/contact-us/" id="contact-us-nav">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="logo-container-phone">
+          <img src="/oceandrill/static/img/Ocean Drill.png" alt="logo" />
+        </div>
+        <div class="navbar-phone" id="navbar-phone">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about-us/">About Us</a></li>
+            <li><a href="/what-we-do/">What We Do</a></li>
+            <li><a href="/our-work/">Our Work</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/contact-us/" id="contact-us-phone">Contact Us</a></li>
+          </ul>
+        </div>
+          <span class="menu-logo" id="show-menu"><img src="/oceandrill/static/img/bars-solid.svg" alt=""  onclick="showmenu()"></span>
+      </nav>
+    {% block content %} 
+    
+    
+    {% endblock content %}
+    <section class="footer-container">
+      <div class="useful-link-wrapper">
+          <h2>Useful links</h2>
+          <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about-us/">About US</a></li>
+              <li><a href="/what-we-do/">What We Do</a> </li>
+              <li><a href="/our-work/">Our Work</a></li>
+              <li><a href="/faq/">FAQ</a> </li>
+              <li><a href="/contact-us/">Contact us</a> </li>
+          </ul>
+      </div>
+      <span data-aos="fade"  data-aos-duration="1000" data-aos-easing="ease"><img id="drill-logo-footer" src="/oceandrill/static/img/Ocean Drill.png"  alt=""></span>
+      <div class="contact-details-wrapper">
+          <h2>Get in touch</h2>
+          <img src="/oceandrill/static/img/location-dot-solid.svg" alt="location:">
+          <p> Mlolongo,Nairobi,Kenya.</p>
+          <img src="/oceandrill/static/img/envelope-solid.svg" alt="email:">
+          <p>odealtd@gmail.com</p>
+          <img src="/oceandrill/static/img/phone-solid.svg" alt="phone:">
+          <p>+254 708140284</p>
+          
+      </div>
+      <p id="copyright-footer">copyright © 2023 • All rights reserved • Ocean drill limited</p>
+  </section>
+    <script>       
+        function showmenu() {
+          var x = document.getElementById("navbar-phone");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+
+          }else if(x.style.display === "block"){
+            x.style.display= "none";
+        }else{
+            x.style.display="block";
+          }
+        }
+    </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration:1000,
+      disable: function() {
+        var maxWidth = 800;
+        return window.innerWidth < maxWidth;
+      }
+    });
+<!-- ------------------------------------------------swiper----------------------------------------- -->
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      direction: 'vertical',
+      loop: true,
+    
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+  var loader = document.getElementById("preloader");
+  window.addEventListener("load", function(){
+    loader.style.display = "none"
+  });
+</script>
+  </body>
+</html>
